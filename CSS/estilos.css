@@ -50,6 +50,7 @@ header{
     align-items: center;
 }
 nav.navbar{
+    background-color: var(--azulClaro);
     width: 100%;
     justify-content: center;
 }
@@ -62,6 +63,13 @@ nav.navbar{
 }
 .container.text-center{
  margin: 4rem auto;
+}
+.card-body{
+  background-color: var(--colorPrincipal);
+}
+.card-title{
+  color: var(--azulOscuro);
+  font-weight: bold;
 }
 footer{
     background-color: var(--colorPrincipal);

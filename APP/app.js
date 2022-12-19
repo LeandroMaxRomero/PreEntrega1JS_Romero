@@ -19,10 +19,12 @@ class Calculador_tmb{
         this.tasa = 0; 
     }
 
-    //* CREO UN MÉTODO PARA CALCULAR LA TASA METABOLICA BASAL    
+    //* CREO UN MÉTODO PARA CALCULAR LA TASA METABOLICA BASAL 
+       
     calcular_tasa(){
-        // let tasa_metabolica_basal = 0;
+
     //* ECUACION DE HARRIS BENEDICT PARA CALCULAR LA TMB
+
     if(genero == "F" || genero == "f"){
         this.tasa = 655.1 + (9.56 * peso) + (1.845 * altura) - (4.6756 * edad);
     }
