@@ -27,15 +27,16 @@
                   <a class="nav-link" href="dieta.html">Registra tu dieta</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="comunidad.html">Comunidad CS</a>
+                  <a class="nav-link" href="market.html">Market</a>
                 </li>
               </ul>          
         </nav>
     </header>
     <main class="main-calculadora">
 
-      <h2>CALCULADORA DE CALORÍAS</h2>
+      <h2>CALCULADORA DE CALORÍAS IDEALES</h2>
       <h3> Te solicitamos la siguiente información para poder realizar los cálculos necesarios para poder recomendarte la mejor opción de consumo para ti</h3>
+      <P><b>Recomendación:</b> Deberías hacer este control con una frecuencia semanal para poder evaluar tu progreso. Las <b>Kilocalorías consumidas durante la última semana</b> podrás obtenerlas en la sección <b>"Registra tu dieta"</b>.</P>
       <br>
       <form action="">
         <fieldset>
@@ -43,58 +44,80 @@
 
           <div id="campos-formulario">
             <div class="campos">
-              <label for="nombre__usuario">NOMBRE COMPLETO</label>
-              <input type="text" placeholder=" Por ej: Lionel Messi" id="nombre_completo">
+              <label for="campo_nombre">NOMBRE COMPLETO</label>
+              <input type="text" placeholder=" Por ej: Lionel Messi" id="campo_nombre">
             </div>
   
             <div class="campos">
-              <label for="genero__usuario">INDICA TU GÉNERO</label>
-              <select name="genero" id="menu">
-                  <option selected disabled> Selecciona una opción</option>
-                  <option> Masculino</option>
-                  <option> Femenino</option>
-              </select>
+              <label for="campo_genero">INDICA TU GÉNERO</label>
+              <div class="campo_radio" id="campo_genero">
+                <div>
+                  <input type="radio" name="campo_genero" value="masculino"> Masculino
+                </div>
+                <div>
+                  <input type="radio" name="campo_genero" value="femenino"> Femenino
+                </div>
+              </div>
             </div>
   
             <div class="campos">
-              <label for="altura__usuario">ALTURA EN CENTÍMETROS</label>
-              <input type="text" placeholder=" Por ej: 165">
+              <label for="campo_altura">ALTURA EN CENTÍMETROS</label>
+              <input id="campo_altura" type="text" placeholder=" Por ej: 165">
             </div>
   
             <div class="campos">
-              <label for="peso__usuario">PESO EN KILOGRAMOS</label>
-              <input type="text" placeholder=" Por ej: 68.5">
+              <label for="campo_peso">PESO EN KILOGRAMOS</label>
+              <input id="campo_peso" type="text" placeholder=" Por ej: 68.5">
             </div>
   
             <div class="campos">
-              <label for="edad__usuario">EDAD EN AÑOS</label>
-              <input type="text" placeholder=" Por ej: 32">
+              <label for="campo_edad">EDAD EN AÑOS</label>
+              <input id="campo_edad" type="text" placeholder=" Por ej: 32">
             </div>
 
             <div class="campos">
-              <label for="ejercicio__usuario">CANTIDAD DE DÍAS DE LA SEMANA QUE HAS EJERCITADO</label>
-              <select name="diasejercicio" id="menu">
-                  <option selected disabled> Selecciona una opción</option>
-                  <option> 0 </option>
-                  <option> 1 </option>
-                  <option> 2 </option>
-                  <option> 3 </option>
-                  <option> 4 </option>
-                  <option> 5 </option>
-                  <option> 6 </option>
-                  <option> 7 </option>
-              </select>
+              <label for="campo_ejercicio">CANTIDAD DE DÍAS DE LA SEMANA QUE HAS EJERCITADO (al menos 30 minutos)</label>
+              <div class="campo_radio" id="campo_ejercicio">
+                <div>
+                  <input type="radio" name="campo_ejercicio" value="1"> 1<br>
+                </div>
+                <div>
+                  <input type="radio" name="campo_ejercicio" value="2"> 2<br>
+                </div>
+                <div>
+                  <input type="radio" name="campo_ejercicio" value="3"> 3<br>
+                </div>
+                <div>
+                  <input type="radio" name="campo_ejercicio" value="4"> 4<br>
+                </div>
+                <div>
+                  <input type="radio" name="campo_ejercicio" value="5"> 5<br>
+                </div>
+                <div>
+                  <input type="radio" name="campo_ejercicio" value="6"> 6<br>
+                </div>
+                <div>
+                  <input type="radio" name="campo_ejercicio" value="7"> 7<br>
+                </div>
+              </div>
             </div>
-  
-            <button type="submit" id="boton"> CALCULAR</button>
+
+            <div class="campos">
+              <label for="campo_kilocalorias">KILOCALORÍAS CONSUMIDAS LA ÚLTIMA SEMANA (Calcularlas <a href="dieta.html">aquí</a>)</label>
+              <input id="campo_kilocalorias" type="text" placeholder=" Por ej: 24000">
+            </div>
+            <button type="submit" id="boton_calorias"> CALCULAR</button>
           </div>
         </fieldset>
       </form>
+      <div id="mensaje" class="alerta_calorias">
+
+      </div>
     </main>
     <footer>
         <h3>Diseñado por LeanRmrDev</h3>
     </footer>
 
-    <script src="../APP/app.js"></script>
+    <script src="../APP/calorias.js"></script>
 </body>
 </html>
